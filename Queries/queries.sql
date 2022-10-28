@@ -124,7 +124,7 @@ LEFT JOIN dept_emp as de
 ON ri.emp_no = de.emp_no
 WHERE de.to_date = ('9999-01-01');
 
---7.3.4
+-- 7.3.4
 -- Employee count by department number
 -- Skill Drill | Create new table & export as csv
 SELECT COUNT(ce.emp_no), de.dept_no
@@ -134,4 +134,64 @@ LEFT JOIN dept_emp as de
 ON ce.emp_no = de.emp_no
 GROUP BY de.dept_no
 ORDER BY de.dept_no;
+
+-- 7.3.5
+SELECT * FROM salaries
+ORDER BY to_date DESC;
+
+-- Filter by hire and birth dates and create a temporary table
+SELECT emp_no,
+    first_name,
+	last_name,
+    gender
+INTO emp_info
+FROM employees
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
+-- List 1: Employee Information
+-- Join the emp_info table onto the salaries table
+SELECT e.emp_no,
+    e.first_name,
+	e.last_name,
+    e.gender,
+    s.salary,
+    de.to_date
+INTO emp_info
+FROM employees as e
+INNER JOIN salaries as s
+ON (e.emp_no = s.emp_no)
+INNER JOIN dept_emp as de
+ON (e.emp_no = de.emp_no)
+WHERE (e.birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+     AND (e.hire_date BETWEEN '1985-01-01' AND '1988-12-31')
+     AND (de.to_date = '9999-01-01');
+	 
+-- List 2: Management
+-- List of managers per department
+SELECT  dm.dept_no,
+        d.dept_name,
+        dm.emp_no,
+        ce.last_name,
+        ce.first_name,
+        dm.from_date,
+        dm.to_date
+INTO manager_info
+FROM dept_manager AS dm
+    INNER JOIN departments AS d
+        ON (dm.dept_no = d.dept_no)
+    INNER JOIN current_emp AS ce
+        ON (dm.emp_no = ce.emp_no);
+		
+-- List 3: Department Retirees
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+-- INTO dept_info
+FROM current_emp as ce
+INNER JOIN dept_emp AS de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no);
 
