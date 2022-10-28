@@ -10,7 +10,7 @@ Through the various tables we created [retirement_titles.csv, retiring_titles.cs
     - 72,458 of the 240,124 current employees
  - 64% of the '(soon-to-be) silver tsunami' employees hold senior roles within the company
     - 57,668 of the 90,398 current, retirement-eligible employees
- - The remaining 36% of the company hold other key positions in the company such as:
+ - The remaining 36% of the 'silver tsunami' hold other key positions in the company such as:
     - 14,222 Engineers
     - 12,243 Staff 
     - 4,502  Technique Leaders
