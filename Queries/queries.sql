@@ -195,3 +195,30 @@ ON (ce.emp_no = de.emp_no)
 INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
+-- 7.3.6
+-- Skill Drill | Query for emp no, first & last name, and dept name
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+INTO dept_info_sales
+FROM current_emp AS ce
+INNER JOIN dept_emp AS de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no)
+WHERE (d.dept_name = 'Sales');
+
+-- Skill Drill | Query for sales and development
+SELECT ce.emp_no,
+	ce.first_name,
+	ce.last_name,
+	d.dept_name
+INTO dept_info_sales_and_development
+FROM current_emp AS ce
+INNER JOIN dept_emp AS de
+ON (ce.emp_no = de.emp_no)
+INNER JOIN departments AS d
+ON (de.dept_no = d.dept_no)
+WHERE d.dept_name IN ('Development', 'Sales')
+ORDER BY dept_name;
