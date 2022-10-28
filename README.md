@@ -32,7 +32,7 @@ Through the various tables we created [retirement_titles.csv, retiring_titles.cs
     - salaries.csv
     - titles.csv
 ### ERD
-![alt text](https://github.com/nguyenauloi/Pewlett-Hackard-Analysis/tree/main/Resources "EmployeesDB.png")
+![alt text](https://github.com/nguyenauloi/Pewlett-Hackard-Analysis/blob/main/Resources/EmployeesDB.png "EmployeesDB.png")
  - Software:
     - VSCode 1.72.2 (user setup)
     - pgAdmin 4
