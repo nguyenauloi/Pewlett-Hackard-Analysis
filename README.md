@@ -20,7 +20,6 @@ Through the various tables we created [retirement_titles.csv, retiring_titles.cs
     - 1,549 current employees are eligible for the mentorship program
     - The criteria for joining this program was current employees who were born in 1965
  
- 
 ## Summary
  - With almost one-third of the company retiring soon, and over half of that number being senior-level staff, the next few years seem like they will be turbulant for Pewlett Hackard. The mentorship program seems more important than ever with the looming threat of the 'silver wave' for the company. Though, it would be important mention that age, alone, was the only criteria for the mentorship program. If we improved this criteria to become more merit-based then, I believe, that we would see a better reflection of the future potential of the company. 
  
@@ -33,7 +32,7 @@ Through the various tables we created [retirement_titles.csv, retiring_titles.cs
     - salaries.csv
     - titles.csv
 ### ERD
-![alt text](https://github.com/nguyenauloi/Pewlett-Hackard-Analysis/blob/main/EmployeesDB.png)
+![alt text](https://github.com/nguyenauloi/Pewlett-Hackard-Analysis/tree/main/Resources EmployeesDB.png)
  - Software:
     - VSCode 1.72.2 (user setup)
     - pgAdmin 4
